@@ -23,7 +23,7 @@ Follow these steps to make sure you can use a super collider instrument.
 3. boot the audio server with Server--> Boot Server 
 4. execute lines 2-18 by placing the cursor at line 18 after the parenthesis, with Language --> Evaluate Section, Line, Region
 5. execute lines 21-23 likewise
-6. execute line 26-28 likewise. You should hear a sound; if you don't, try to understand why, or write to the #helpme channel. This part will be called START THE SOUND
+6. execute line 26-28 likewise. You should hear a sound; if you don't, try to understand why. This part will be called START THE SOUND
 7. execute line 35-37 likewise. The sound should stop. This part will be called STOP THE SOUND.
 
 You may want to learn what are the keyboard shortcut for booting the server and executing regions of code.
@@ -43,7 +43,7 @@ Follow these steps to make sure you can connect processing with super collider v
 2. install the oscP5 library with Tools -> Manage Tools -> Libraries -> find oscP5 and install it
 3. Execute the script
 4. START THE SOUND from Supercollider executing line 26-28
-5. move the mouse within the window of processing. You should hear the timbre of the sound changing; if you don't, try to understand why, or write to the #helpme channel.
+5. move the mouse within the window of processing. You should hear the timbre of the sound changing; if you don't, try to understand why.
 6. STOP THE SOUND from Supercollider and close Processing.
 
 
@@ -54,6 +54,6 @@ Follow these steps to make sure you can connect Python with super collider via O
 2. open the file example.py  from lab1_tool_reactive_agents/python_music_composition/
 3. Execute the script and press a key + enter to start it
 4. START THE SOUND from Supercollider
-5. you should hear some notes going on; if you don't, try to understand why, or write to the #helpme channel.
+5. you should hear some notes going on; if you don't, try to understand why.
 6. Press ctrl+c in the Python terminal to stop the Python script
 7. STOP THE SOUND from Supercollider
