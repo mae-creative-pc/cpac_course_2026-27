@@ -10,11 +10,6 @@ git clone https://github.com/mae-creative-pc/cpac_course_2026-27
 ```
 The repository is set as public (everybody can clone it), but only professor and assistants can modify it. If you want to create a new repository starting from this, you can _fork_ the repository on your own Github, by clicking the fork button in the top right corner of the github page.
 
-# Slack Workspace
-The course is organized with a Slack Workspace used to share links and have a more prompt communication with students.
-
-Join the workspace by following invitation links in the WeBeep portal or asking professor Zanoni.
-
 # Install Python packages
 
 Required packages are indicated in the "requirements.txt" file.

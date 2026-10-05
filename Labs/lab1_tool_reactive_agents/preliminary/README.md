@@ -3,14 +3,23 @@
 This guide describes some preliminary operations that you need for lab 1 of the course.
 This will guarantee everybody will have an environment ready for the class.
 
-For any problem, ask in the #helpme channel in the slack and I will try to help you out.
+# Python setup
+
+We suggest you to create a virtual environment. 
+Google "how to create a virtual enviroment with Python" if you need some help.
+
+Install python requirments 
+```
+pip install -r requirements.txt
+```
+
 
 # Super collider
 Follow these steps to make sure you can use a super collider instrument.
 
 
 1. download supercollider from https://supercollider.github.io/downloads.html and install it
-2. open the file moog.scd from lab2_reactive_agents/exercises/super_collider_instrument
+2. open the file moog.scd from lab1_tool_reactive_agents/exercises/super_collider_instrument
 3. boot the audio server with Server--> Boot Server 
 4. execute lines 2-18 by placing the cursor at line 18 after the parenthesis, with Language --> Evaluate Section, Line, Region
 5. execute lines 21-23 likewise
@@ -30,7 +39,7 @@ We will need to connect super collider with OSC. Follow the previous steps from 
 # Processing
 Follow these steps to make sure you can connect processing with super collider via OSC
 
-1. open the file testOSC.pde from lab1_tools_reactive_agents/exercises/processing_playing_physics/testOSC
+1. open the file testOSC.pde from lab1_tool_reactive_agents/exercises/processing_playing_physics/testOSC
 2. install the oscP5 library with Tools -> Manage Tools -> Libraries -> find oscP5 and install it
 3. Execute the script
 4. START THE SOUND from Supercollider executing line 26-28
@@ -42,7 +51,7 @@ Follow these steps to make sure you can connect processing with super collider v
 Follow these steps to make sure you can connect Python with super collider via OSC
 
 1. install from pip the library python-osc as ```pip install python-osc``` (if you already setup a virtual envoirments with requirements.txt, it's already installed)
-2. open the file example.py  from lab2_reactive_agents/python_music_composition/
+2. open the file example.py  from lab1_tool_reactive_agents/python_music_composition/
 3. Execute the script and press a key + enter to start it
 4. START THE SOUND from Supercollider
 5. you should hear some notes going on; if you don't, try to understand why, or write to the #helpme channel.
