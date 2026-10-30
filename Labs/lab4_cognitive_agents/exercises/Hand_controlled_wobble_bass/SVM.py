@@ -57,19 +57,19 @@ def train_svm():
 
 	pca = PCA(n_components=150, svd_solver='randomized', whiten=True, random_state=42)
 	svc = SVC(kernel='rbf', class_weight='balanced')
-	model = make_pipeline(pca,svc)
+	#model = # FILL THE CODE
 
 	with warnings.catch_warnings():
 		# ignore all caught warnings
 		warnings.filterwarnings("ignore")
 		# execute code that will generate warnings
-		xtrain, xtest, ytrain, ytest = train_test_split(images_vector,labels,random_state=42)
+		#xtrain, xtest, ytrain, ytest = # FILL THE CODE
 
 	param_grid = {'svc__C': [1, 5, 10, 50], 'svc__gamma': [0.0001, 0.0005, 0.001, 0.005]}
 	grid = GridSearchCV(model, param_grid)
 
 	print('Fit the SVM model')
-	grid.fit(xtrain,ytrain)
+	# FILL THE CODE
 
 	print(grid.best_params_)
 

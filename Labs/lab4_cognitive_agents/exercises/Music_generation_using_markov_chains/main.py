@@ -41,22 +41,19 @@ bigrams[:5]
 def predict_next_state(chord:str, data:list=bigrams):
     """Predict next chord based on current state."""
     # create list of bigrams which starts with current chord
-    bigrams_with_current_chord = [bigram 
-                                  for bigram in bigrams 
-                                  if bigram.split(' ')[0] == chord]    
+    #bigrams_with_current_chord = # FILL CODE
     # count appearance of each bigram
-    count_appearance = dict(Counter(bigrams_with_current_chord))
+    #count_appearance = # FILL CODE
 
     # convert appearance into probabilities
-    for ngram in count_appearance.keys(): # FILL CODE
-        count_appearance[ngram] = count_appearance[ngram] / len(bigrams_with_current_chord) 
-        
+    #for ngram in count_appearance.keys(): # FILL CODE
+        #count_appearance[ngram] = # FILL CODE
     # create list of possible options for the next chord
-    options = [key.split(' ')[1] for key in count_appearance.keys()]# FILL CODE
+    #options = # FILL CODE
     # create  list of probability distribution
-    probabilities = list(count_appearance.values())
+    #probabilities = # FILL CODE
     # return random prediction
-    return np.random.choice(options, p=probabilities)
+    return # FILL CODE
 
 
 # %% Sequence generation function
@@ -66,14 +63,15 @@ def generate_sequence(chord:str=None, data:list=bigrams, length:int=30):
     chords = []
     for n in range(length):
         # append next chord for the list
-        chords.append(predict_next_state(chord))
-        print(chord)
+        # FILL CODE
         # use last chord in sequence to predict next chord
-        chord = chords[-1]
+        # FILL CODE
+        pass #REMOVE THIS LINE
     return chords  
 
 # %% Generate the sequence and send OSC message
 chords = generate_sequence('C')
+
 
 print('')
 print('')
@@ -92,7 +90,7 @@ def start_osc_communication():
     # OSC server ip
     parser.add_argument("--ip", default='127.0.0.1', help="The ip of the OSC server")
     # OSC server port (check on SuperCollider)
-    parser.add_argument("--port", type=int, default=57120, help="The port the OSC server is listening on")
+    parser.add_argument("--port", type=int, default=57121, help="The port the OSC server is listening on")
 
     # Parse the arguments
     args = parser.parse_args()

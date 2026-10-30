@@ -5,7 +5,7 @@ s.boot
 
 ServerOptions.outDevices;
 
-//s.options.outDevice_('Altoparlanti MacBook Pro');
+s.options.outDevice_('Altoparlanti MacBook Pro');
 
 
 
@@ -60,8 +60,8 @@ x = OSCFunc( { | msg, time, addr, port |
 		// handle class A message (freq and amplitude)
 		if (msg[1]=='a'){
 			// Parse message
-			pyFreq = msg[2].asFloat;
-			pyAmp  = msg[3].asFloat;
+			pyFreq = //...
+			pyAmp  = //...
 			( "freq is " + pyFreq ).postln;
 			( "amp is " + pyAmp ).postln;
 
@@ -72,8 +72,8 @@ x = OSCFunc( { | msg, time, addr, port |
 		// handle class B message (detune and lfo)
 		if (msg[1]=='b'){
 			// parse message
-			pyDetune = msg[2].asFloat;
-			pyLfo = msg[3].asFloat;
+			pyDetune = //...
+			pyLfo = //...
 
 			// print info
 			( "Detuning is " + pyDetune ).postln;

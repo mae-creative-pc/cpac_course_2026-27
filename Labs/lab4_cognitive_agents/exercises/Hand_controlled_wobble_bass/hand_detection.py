@@ -10,6 +10,10 @@ from hand_detection_utils import *
 from SVM import *
 
 
+# Background subtraction and stuff
+# https://gogul.dev/software/hand-gesture-recognition-p1
+# https://gogul.dev/software/hand-gesture-recognition-p2
+
 # global variables
 #bg = None
 dirname = os.path.dirname(__file__)
@@ -88,7 +92,7 @@ if __name__ == "__main__":
 		else:
 			
 			# segment the hand region
-			hand = segment(gray)
+			#hand = segment(gray)
 			
 			# check whether hand region is segmented
 			if hand is not None:
@@ -101,9 +105,8 @@ if __name__ == "__main__":
 							
 				# Center of the hand
 				#c_x, c_y = detect_palm_center(segmented)
-				c_x, c_y = detect_palm_center_2(thresholded)
-				radius = 5
-				cv2.circle(thresholded, (c_x,c_y), radius, 0, 1)
+				#radius = 5
+				#cv2.circle(# image where we draw the circle, # tuple representing center, radius, 0, 1)
 				
 				cv2.imshow("Thesholded", thresholded)
 
@@ -155,15 +158,16 @@ if __name__ == "__main__":
 			cv2.putText(clone, text, (70, 45), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
 			# Here we send the OSC message corresponding
-			if START_SOUND:
-				if class_test == 0:
-					freq = (c_x/width_roi)*100
-					amp = c_y/height_roi
-					client.send_message("/synth_control",['a',freq,amp])
-				else:
-					detune = (c_y/height_roi)*0.1
-					lfo = (c_x/width_roi)*10
-					client.send_message("/synth_control",['b',lfo,detune])
+			#if START_SOUND:
+				#if class_test == 0:
+
+					#freq = # FILL THE CODE
+					#amp = # FILL THE CODE
+					#client.send_message(# FILL THE CODE)
+				#else:
+					#detune = # FILL THE CODE
+					#lfo = # FILL THE CODE
+					#client.send_message(# FILL THE CODE)
 		
 
 		# display the frame with segmented hand
